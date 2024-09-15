@@ -7,84 +7,298 @@
   <title>Jiyeon Kim</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Optional: Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Profile section layout */
+    .profile-section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 56px;
+    }
+
+    /* Profile image styling */
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      margin-right: 30px;
+      margin-top: 60px;
+    }
+
+    /* About Me section styling */
+    .about-me {
+      flex: 1;
+      text-align: justify;
+      font-size: 22px;
+      margin-right: 30px;
+    }
+
+    .about-me h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      margin-top: 30px;
+    }
+
+    .about-me .title {
+      font-size: 1.8rem;
+      color: gray;
+      margin-top: 20px;
+    }
+
+    .about-me .department-link a {
+      color: #1a0dab;
+    }
+
+    /* Section layout for Interests and Education */
+    .details-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .details-section div {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .details-section h3 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    /* Social media icons styling */
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      color: #4c4c4c;
+    }
+
+    /* Add margin to separate sections */
+    .section-divider {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+  </style>
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">Jiyeon Kim</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+          <a class="nav-link" href="#publication">Publication</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Research</a>
+          <a class="nav-link" href="#teaching">Teaching</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#awards">Awards</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <header class="jumbotron jumbotron-fluid text-center" style="background-image: url('images/header-bg.jpg'); background-size: cover; color: rgb(0, 0, 0);">
-    <div class="container">
-      <h1 class="display-4">Jiyeon Kim</h1>
-      <p class="lead">Ph.D. student at University at Buffalo | GeoAI Researcher</p>
-      <a href="#projects" class="btn btn-primary btn-lg">Explore My Work</a>
+  <!-- Profile Section -->
+  <section id="home" class="container profile-section">
+    <div>
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img">
     </div>
-  </header>
+    <div class="about-me">
+      <h1>Jiyeon Kim</h1>
+      <p class="title">Ph.D. student</p>
+      <p class="department-link">Department of Geography, <a href="https://www.buffalo.edu/">University at Buffalo</a></p>
+      <p style="font-size: 30px; text-align: justify;"></p>My name is Jiyeon Kim. I am a Ph.D. student in the Department of Geography at University at Buffalo (UB). I am conducting research in the GeoAI lab under the supervision of Dr. Yingjie Hu. My research interests include GeoAI, disaster resilience, and wildfires.</p>
 
-  <!-- About Section -->
-  <section id="about" class="container text-center my-5">
-    <h2>About Me</h2>
-    <img src="images/profile.jpg" alt="Profile Picture" class="rounded-circle my-3" width="150">
-    <p class="lead">I am a Ph.D. student specializing in GeoAI research with a focus on wildfire spread prediction. I combine deep learning, sensitivity analysis, and spatiotemporal modeling to enhance the understanding of wildfire behavior.</p>
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-researchgate"></i></a>
+        <a href="#"><i class="fab fa-orcid"></i></a>
+      </div>
+
+      <!-- Interests and Education next to About Me -->
+      <div class="details-section">
+        <div>
+          <h3>Research Interests</h3>
+          <ul>
+            <li>Geospatial Artificial Intelligence</li>
+            <li>Disaster Resilience</li>
+            <li>Wildfire Prediction</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li><strong>Ph.D. in Geography (GIS), 2023 ~</strong><br> University at Buffalo</li>
+            <li><strong>M.S. in Geography (GIS), 2022</strong><br>Ewha Womans University</li>
+            <li><strong>B.A. in Geograpy Education, 2019</strong><br>minor: computer science<br>Ewha Womans University</li>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="bg-light py-5">
+  <!-- Divider -->
+  <hr class="section-divider">
+
+  <!-- Publication Section -->
+  <section id="publication" class="container my-5 section">
+    <div class="title-column">
+      <h2>Publications</h2>
+    </div>
+    <div class="content-column">
+      <!-- Ordered List for Publications -->
+      <ol reversed>
+        <li>Kang, Y., <strong>Kim, J.</strong>, Park, J., & Lee, J. (2023). Assessment of perceived and physical walkability using street view images and deep learning technology. <em>ISPRS International Journal of Geo-Information</em>, 12(5), 186.</li>
+        <li><strong>Kim, J.</strong>, & Kang, Y. (2022). Automatic classification of photos by tourist attractions using deep learning model and image feature vector clustering. <em>ISPRS International Journal of Geo-Information</em>, 11(4), 245.</li>
+        <li>Cho, N., Kang, Y., Yoon, J., Park, S., & <strong>Kim, J</strong>. (2022). Classifying tourists’ photos and exploring tourism destination image using a deep learning model. <em>Journal of Quality Assurance in Hospitality & Tourism</em>, 23(6), 1480-1508.</li>
+        <li>Kang, Y., Cho, N., Yoon, J., Park, S., & <strong>Kim, J</strong>. (2021). Transfer learning of a deep learning model for exploring tourists’ urban image using geotagged photos. <em>ISPRS International Journal of Geo-Information</em>, 10(3), 137.</li>
+        <li><strong>Kim, J.</strong>, Lee, D., Lee, J., Lee, J., & Kang, Y. (2022). Research Trend Analysis on Trajectory Data Mining: Focusing on Applications and Methods, <em>Journal of the Korean Cartographic Association</em>, 22(3), 37-57. (in Korean)</li>
+        <li>Lee, J., Lee, J., <strong>Kim, J.</strong>, Lee, D., & Kang, Y. (2022). Research Trends Analysis of Vision-based Trajectory Prediction Using Deep Learning, <em>Journal of Korean Society for Geospatial Information Science</em>, 30(4), 113-128. (in Korean)</li>
+        <li><strong>Kim, J.</strong>, & Kang, Y. (2022). Development of a Deep Learning Model to Predict the Qualitative Evaluation of a Walking Environment based on Street View Images, <em>Journal of Korean Society for Geospatial Information Science</em>, 30(2), 45-56. (in Korean)</li>
+        <li>Park, J., <strong>Kim, J.</strong>, & Kang, Y. (2022). Development of Walkability Evaluation Index Using Streetview Image and Semantic Segmentation, <em>Journal of the Korean Cartographic Association</em>, 22(1), 53-68. (in Korean)</li>
+        <li>Lee, J., Kang, Y., <strong>Kim, J.</strong>, & Park, J. (2022). Analysis of Street View Image Object Affecting Perceived Walkability Using Machine Learning, <em>Journal of the Association of Korean Geographers</em>, 11(3), 375-391. (in Korean)</li>
+        <li>Kang, Y., Cho, N., Park, S., & <strong>Kim, J</strong>. (2021). Exploring Tourism Activities of Tourists and Residents through Convolutional Neural Network-based SNS Photo Classification, <em>Journal of the Korean Geographical Society</em>, 56(3), 247-264. (in Korean)</li>
+        <li>Park, S., <strong>Kim, J.</strong>, Kang, Y., Cho, N., & Yoon, J. (2020). Travel Sites Recommendation Considering User’s Preferences Shown in User’s SNS Photos, <em>Journal of Korean Society for Geospatial Information Science</em>, 28(4), 127-136. (in Korean)</li>
+      </ol>
+  
+      <!-- Divider for separating sections -->
+      <hr class="section-divider">
+  
+      <!-- Conference Presentations Section -->
+      <div class="title-column">
+        <h3>Conference Presentations</h3>
+      </div>
+      <ol reversed>
+        <li><strong>Kim, J.</strong>, Hu, Y. Zhou, R.Z., & Sun, K. (2024). Assessing the ability of deep learning models integrated with environmental
+            and weather variables for predicting fire spread: A case study of the 2023 Maui
+            wildfires, <em>2024 CaGIS + UCGIS Symposium.</em></li>
+        <li>Park, J., Kang, Y., <strong>Kim, J.</strong>, Lee, J., Jo, J., Lee, K., Yoo, K., Lee, C., & Nam, K. (2022). Development of Walkability Evaluation Index for Jeon-ju city Using Streetview Image and Semantic Segmentation, <em>Proceedings of the Korean Cartographic Association</em>. (in Korean)</li>
+        <li><strong>Kim, J.</strong>, & Kang, Y. (2022). Developing deep learning model for predicting perception of the urban built environment using high-resolution street view images: A qualitative evaluation of walkability, <em>Proceedings of the Korean Society for Geospatial Information Science</em>. (in Korean)</li>
+        <li>Park, J., Kang, Y., <strong>Kim, J.</strong>, Lee, J., Jo, J., Lee, K., Yoo, K., Lee, C., & Nam, K. (2022). Walkability evaluation using high-resolution street view images and semantic segmentation techniques, <em>Proceedings of the Korean Society for Geospatial Information Science</em>. (in Korean)</li>
+        <li><strong>Kim, J.</strong>, & Kang, Y. (2022). Automatic Classification of Photos by Tourist Attractions Using Deep Learning Model and Image Feature Vector Clustering, <em>Proceedings of the Korean Cartographic Association</em>. (in Korean)</li>
+        <li><strong>Kim, J.</strong>, Lee, D., Lee, J., Lee, J., & Kang, Y. (2022). A review of research on trajectory data mining: Focusing on applications and methods, <em>Proceedings of the Korean Cartographic Association</em>. (in Korean)</li>
+        <li>Lee, J., Lee, J., <strong>Kim, J.</strong>, Lee, D., & Kang, Y. (2022). Research Trends Analysis of Vision-based Trajectory Prediction Using Deep Learning, <em>Proceedings of the Korean Cartographic Association</em>. (in Korean)</li>
+        <li><strong>Kim, J.</strong>, & Kang, Y. (2021). Extraction of Representative Photos by Tourist Destination Using Deep Learning Model and Image Feature Vector Clustering, <em>Proceedings of the Korean Society for Geospatial Information Science</em>. (in Korean)</li>
+        <li>Kang, Y., Cho, N., Park, S., & <strong>Kim, J</strong>. (2021). Classification of SNS photos and analysis of tourism photos based on Deep learning, <em>Proceedings of the Korean Cartographic Association</em>. (in Korean)</li>
+        <li><strong>Kim, J.</strong>, Kang, Y., Cho, N., & Park, S. (2021). Classifying Tourists’ Photos and Exploring Tourism Destination Image Using a Deep Learning Model. <em>Abstracts of the ICA</em>, 3, 150.</li>
+        <li>Cho, N., Kang, Y., Yoon, J., Park, S., & <strong>Kim, J.</strong>. (2020). Exploring Tourism Activities through Convolutional Neural Network-based SNS Photo Classification, <em>Proceedings of the Korean Geographical Society</em>. (in Korean)</li>
+        <li>Park, S., <strong>Kim, J.</strong>, Kang, Y., Cho, N., & Yoon, J. (2020). ROA Recommendation considering user’s preference shown in photo’s visual contents, <em>Proceedings of the Korean Society for Geospatial Information Science</em>. (in Korean)</li>
+        <li>Yoon, J., Cho, N., Park, S., <strong>Kim, J.</strong>, & Kang, Y. (2020). Transfer Learning of Inception-v3 for Tourism Image Classification, <em>Proceedings of the Korean Society for Geospatial Information Science</em>. (in Korean)</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Teaching Section -->
+<!-- Teaching Section -->
+<section id="teaching" class="bg-light py-5 section">
     <div class="container">
-      <h2 class="text-center">Projects</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Wildfire Spread Modeling</h5>
-              <p class="card-text">Research on predicting wildfire spread using deep learning techniques and sensitivity analysis.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
+      <div class="title-column">
+        <h2>Teaching</h2>
+      </div>
+      <div class="content-column">
+        <ul>
+          <!-- Fall 2023 ~ University at Buffalo -->
+          <li><strong>(Fall 2023 ~) University at Buffalo</strong>, New York, United States
+            <ul>
+              <li>Fall 2024Teaching assistance for the class, Univariate Statistics in Geography (GEO 211)</li>
+              <li>Teaching assistance for the class, Earth, Environment, And Climate Lab (GEO 105) - Fall 2024</li>
+              <li>Teaching assistance for the class, Geographic Information System (GEO 481/506) - Spring 2024</li>
+              <li>Teaching assistance for the class, Geographic Information System (GEO 481/506) - Fall 2023</li>
+            </ul>
+          </li>
+          <br>
+          <!-- Spring 2023 ~ Fall 2023 EWHA Womans UNIVERSITY -->
+          <li><strong>(Spring 2023 ~ Fall 2023) EWHA Womans University<</strong>, Seoul, South Korea
+            <ul>
+              <li>Designated as a part-time lecturer for the class, ‘Spatial statistics’ - Spring 2023</li>
+            </ul>
+          </li>
+          <br>
+          <!-- Additional Teaching Experience -->
+          <li><strong>(Fall 2022) EWHA Womans University</strong>, Seoul, South Korea
+            <ul>
+              <li>Designated as a part-time lecturer for the class, ‘GIS application capstone design’ - Fall 2022</li>
+            </ul>
+          </li>
+          <br>
+          <li><strong>(January 2021 ~ January 2022) KOREA HUMAN RESOURCE DEVELOPMENT INSTITUTE</strong>
+            <ul>
+              <li>Designated as a part-time lecturer for the class, ‘Overview of GIS and Analysis of Spatial Data Using QGIS’</li>
+            </ul>
+          </li>
+          <br>
+          <li><strong>(October 2022) SOFTWARE ACADEMY in KOREA UNIVERSITY</strong>
+            <ul>
+              <li>Designated as a part-time lecturer for the class, ‘Overview of GIS and Analysis of Spatial Data Using QGIS’</li>
+            </ul>
+          </li>
+          <br>
+          <li><strong>(October 2022) KOREAN LAND and GEOSPATIAL INFORMATIX CORPORATION</strong>
+            <ul>
+              <li>Designated as a part-time lecturer for the class, ‘Understanding of Machine Learning and Practice with R’</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Awards Section -->
+<section id="awards" class="container my-5 section">
+    <div class="title-column">
+      <h2>Awards</h2>
+    </div>
+      <div class="content-column">
+        <!-- Journal Awards Section -->
+        <ul>
+            <li><strong>Journal Awards</strong>
+              <ul style="list-style-type: circle;">
+                <li>Student Paper Award (3<sup>rd</sup> Place). CaGIS+UCGIS Symposium 2024</li>
+                <li>Outstanding Paper Award. The Journal of Korean Society for Geospatial Information Science 2022</li>
+                <li>Outstanding Paper Award. The Journal of Korean Society for Geospatial Information Science 2022</li>
+                <li>Outstanding Paper Award. The Journal of Korean Society for Geospatial Information Science 2021</li>
+              </ul>
+            </li>
+          </ul>
+      
+          <!-- Contest Awards Section -->
+          <ul>
+            <li><strong>Contest Awards</strong>
+              <ul style="list-style-type: circle;">
+                <li>2nd Prize. Big-data contest. National Information Society Agency 2020</li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">GeoAI and XAI</h5>
-              <p class="card-text">Exploring explainable AI techniques in geospatial contexts to understand model decision-making.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Fire Risk Assessment</h5>
-              <p class="card-text">Analyzing fire risk factors to improve prevention and response strategies.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
+      </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container section">
+      <div class="title-column">
+        <h2>Contact</h2>
+      </div>
+      <div class="content-column">
+        <p><a href="mailto:jiyeonki@buffalo.edu">jiyeonki@buffalo.edu</a></p>
       </div>
     </div>
   </section>
